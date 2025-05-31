@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_887594",
+    "clinical_data": {
+        "age": 39,
+        "menopausal_status": "",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 1,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 158,
+            "y_min": 1,
+            "y_max": 238,
+            "z_min": 1,
+            "z_max": 254
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY2",
+        "site": "AAW",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "TrioTim ",
+        "field_strength": 3.0,
+        "echo_time": 1.69,
+        "repetition_time": 4.6
+    }
+}

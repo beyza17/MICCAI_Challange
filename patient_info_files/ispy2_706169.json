@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_706169",
+    "clinical_data": {
+        "age": 70,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 70,
+            "y_min": 1,
+            "y_max": 300,
+            "z_min": 143,
+            "z_max": 318
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "ISPY2",
+        "site": "AAA",
+        "scanner_manufacturer": "Philips",
+        "scanner_model": "Achieva ",
+        "field_strength": 1.5,
+        "echo_time": 2.598,
+        "repetition_time": 5.208
+    }
+}

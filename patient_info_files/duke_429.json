@@ -1,0 +1,30 @@
+{
+    "patient_id": "DUKE_429",
+    "clinical_data": {
+        "age": 54,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "her2_pure",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 142,
+            "y_min": 50,
+            "y_max": 283,
+            "z_min": 8,
+            "z_max": 160
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "DUKE",
+        "site": "DUKE",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Avanto",
+        "field_strength": 1.5,
+        "echo_time": 1.5,
+        "repetition_time": 4.26
+    }
+}

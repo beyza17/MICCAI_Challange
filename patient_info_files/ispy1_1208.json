@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY1_1208",
+    "clinical_data": {
+        "age": 42,
+        "menopausal_status": "",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 1,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 60,
+            "y_min": 1,
+            "y_max": 254,
+            "z_min": 35,
+            "z_max": 254
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY1",
+        "site": "AAB",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Sonata",
+        "field_strength": 1.5,
+        "echo_time": 4.76,
+        "repetition_time": 27.0
+    }
+}

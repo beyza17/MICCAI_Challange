@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY1_1233",
+    "clinical_data": {
+        "age": 27,
+        "menopausal_status": "",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 42,
+            "y_min": 1,
+            "y_max": 467,
+            "z_min": 33,
+            "z_max": 510
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY1",
+        "site": "AAH",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "MAGNETOM VISION ",
+        "field_strength": 1.5,
+        "echo_time": 4.5,
+        "repetition_time": 11.0
+    }
+}

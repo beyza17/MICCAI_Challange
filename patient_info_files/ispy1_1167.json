@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY1_1167",
+    "clinical_data": {
+        "age": 50,
+        "menopausal_status": "",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "her2_enriched",
+        "breast_coordinates": {
+            "x_min": 120,
+            "x_max": 230,
+            "y_min": 1,
+            "y_max": 254,
+            "z_min": 20,
+            "z_max": 254
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "ISPY1",
+        "site": "AAC",
+        "scanner_manufacturer": "GE",
+        "scanner_model": "SIGNA EXCITE",
+        "field_strength": 1.5,
+        "echo_time": 4.2,
+        "repetition_time": 6.74
+    }
+}

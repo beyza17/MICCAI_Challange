@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_455828",
+    "clinical_data": {
+        "age": 50,
+        "menopausal_status": "pre (<6 months since LMP AND no prior bilateral ovariectomy AND not on estrogen replacement)",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 1,
+        "tumor_subtype": "luminal_a",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 62,
+            "y_min": 1,
+            "y_max": 231,
+            "z_min": 1,
+            "z_max": 253
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY2",
+        "site": "AAX",
+        "scanner_manufacturer": "GE",
+        "scanner_model": "Optima MR450w ",
+        "field_strength": 1.5,
+        "echo_time": 2.564,
+        "repetition_time": 5.7
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_290413",
+    "clinical_data": {
+        "age": 59,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal_b",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 70,
+            "y_min": 2,
+            "y_max": 309,
+            "z_min": 3,
+            "z_max": 192
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "ISPY2",
+        "site": "AAF",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Verio ",
+        "field_strength": 3.0,
+        "echo_time": 1.37,
+        "repetition_time": 4.32
+    }
+}

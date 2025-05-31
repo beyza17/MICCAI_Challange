@@ -1,0 +1,30 @@
+{
+    "patient_id": "DUKE_180",
+    "clinical_data": {
+        "age": 76,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 126,
+            "y_min": 27,
+            "y_max": 405,
+            "z_min": 1,
+            "z_max": 224
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "DUKE",
+        "site": "DUKE",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "TrioTim ",
+        "field_strength": 3.0,
+        "echo_time": 1.44,
+        "repetition_time": 3.7
+    }
+}

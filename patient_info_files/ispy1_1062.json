@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY1_1062",
+    "clinical_data": {
+        "age": 34,
+        "menopausal_status": "",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal",
+        "breast_coordinates": {
+            "x_min": 8,
+            "x_max": 54,
+            "y_min": 44,
+            "y_max": 188,
+            "z_min": 46,
+            "z_max": 192
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY1",
+        "site": "AAI",
+        "scanner_manufacturer": "GE",
+        "scanner_model": "GENESIS_SIGNA ",
+        "field_strength": 1.5,
+        "echo_time": 4.2,
+        "repetition_time": 8.4
+    }
+}

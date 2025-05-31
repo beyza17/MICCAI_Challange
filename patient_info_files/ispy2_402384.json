@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_402384",
+    "clinical_data": {
+        "age": 59,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 158,
+            "y_min": 1,
+            "y_max": 239,
+            "z_min": 1,
+            "z_max": 254
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY2",
+        "site": "AAG",
+        "scanner_manufacturer": "Philips",
+        "scanner_model": "Intera",
+        "field_strength": 1.5,
+        "echo_time": 2.814,
+        "repetition_time": 5.4091
+    }
+}

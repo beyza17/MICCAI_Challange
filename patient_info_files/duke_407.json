@@ -1,0 +1,30 @@
+{
+    "patient_id": "DUKE_407",
+    "clinical_data": {
+        "age": 45,
+        "menopausal_status": "pre",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 198,
+            "y_min": 47,
+            "y_max": 392,
+            "z_min": 256,
+            "z_max": 502
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "DUKE",
+        "site": "DUKE",
+        "scanner_manufacturer": "GE",
+        "scanner_model": "Signa HDxt",
+        "field_strength": 1.5,
+        "echo_time": 2.28,
+        "repetition_time": 4.88
+    }
+}

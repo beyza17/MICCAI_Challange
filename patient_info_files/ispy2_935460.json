@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_935460",
+    "clinical_data": {
+        "age": 65,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 62,
+            "y_min": 1,
+            "y_max": 239,
+            "z_min": 4,
+            "z_max": 254
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY2",
+        "site": "AAX",
+        "scanner_manufacturer": "GE",
+        "scanner_model": "Optima MR450w ",
+        "field_strength": 1.5,
+        "echo_time": 2.528,
+        "repetition_time": 5.354
+    }
+}

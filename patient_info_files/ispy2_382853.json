@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_382853",
+    "clinical_data": {
+        "age": 32,
+        "menopausal_status": "pre (< 6 months since LMP AND no prior bilateral ovariectomy AND not on estrogen replacement)",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 1,
+        "tumor_subtype": "her2_enriched",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 70,
+            "y_min": 18,
+            "y_max": 325,
+            "z_min": 3,
+            "z_max": 192
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "ISPY2",
+        "site": "AAF",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Verio ",
+        "field_strength": 3.0,
+        "echo_time": 1.42,
+        "repetition_time": 4.32
+    }
+}

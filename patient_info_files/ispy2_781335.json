@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_781335",
+    "clinical_data": {
+        "age": 57,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 88,
+            "y_min": 1,
+            "y_max": 278,
+            "z_min": 1,
+            "z_max": 310
+        }
+    },
+    "imaging_data": {
+        "bilateral": false,
+        "dataset": "ISPY2",
+        "site": "AAB",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Espree",
+        "field_strength": 1.5,
+        "echo_time": 1.91,
+        "repetition_time": 5.07
+    }
+}

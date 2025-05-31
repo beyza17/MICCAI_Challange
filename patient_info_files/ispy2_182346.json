@@ -1,0 +1,30 @@
+{
+    "patient_id": "ISPY2_182346",
+    "clinical_data": {
+        "age": 58,
+        "menopausal_status": "post",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "luminal_a",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 142,
+            "y_min": 23,
+            "y_max": 332,
+            "z_min": 192,
+            "z_max": 382
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "ISPY2",
+        "site": "AAL",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Symphony",
+        "field_strength": 1.5,
+        "echo_time": 1.71,
+        "repetition_time": 4.57
+    }
+}

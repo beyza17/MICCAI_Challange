@@ -1,0 +1,30 @@
+{
+    "patient_id": "DUKE_612",
+    "clinical_data": {
+        "age": 42,
+        "menopausal_status": "pre",
+        "breast_density": ""
+    },
+    "primary_lesion": {
+        "pcr": 0,
+        "tumor_subtype": "triple_negative",
+        "breast_coordinates": {
+            "x_min": 1,
+            "x_max": 206,
+            "y_min": 62,
+            "y_max": 357,
+            "z_min": 224,
+            "z_max": 438
+        }
+    },
+    "imaging_data": {
+        "bilateral": true,
+        "dataset": "DUKE",
+        "site": "DUKE",
+        "scanner_manufacturer": "SIEMENS",
+        "scanner_model": "Skyra ",
+        "field_strength": 3.0,
+        "echo_time": 1.44,
+        "repetition_time": 3.77
+    }
+}
