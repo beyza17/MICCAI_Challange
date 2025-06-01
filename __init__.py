@@ -38,7 +38,14 @@ class Preprocessed:
         print("✅ Preprocessing complete.")
         return out_images_folder, out_segmentations_folder
 
+    def read_mri_phase_from_patient_id(self, images_folder, patient_id, phase=0):
+        path = f"{images_folder}/{patient_id}/{patient_id}_000{phase}.nii.gz"
+        return sitk.ReadImage(path, sitk.sitkFloat32)
 
+    def read_segmentation_from_patient_id(self, segmentations_folder, patient_id):
+        path = f"{segmentations_folder}/{patient_id}.nii.gz"
+        return sitk.ReadImage(path, sitk.sitkUInt8)
+        
     @staticmethod
     def make_isotropic(image_sitk, target_spacing=1.0, interpolator=sitk.sitkBSpline):
         spacing = image_sitk.GetSpacing()
