@@ -3,19 +3,12 @@ from model import Model
 
 # Define paths
 images_folder = "/app/ingested_program/FPixel_submission/original_images"
-segmentations_folder = "/app/ingested_program/FPixel_submission/original_labels"
-
 out_images_folder = "/app/ingested_program/FPixel_submission/Dataset006_miccai/imagesTs"
-out_segmentations_folder = "/app/ingested_program/FPixel_submission/Dataset006_miccai/labelsTs"
 
-# Run preprocessing
+# Preprocess test images only
 preprocessor = Preprocessed()
-preprocessor.preprocess_all(
-    images_folder=images_folder,
-    segmentations_folder=segmentations_folder,
-    out_images_folder=out_images_folder,
-    out_segmentations_folder=out_segmentations_folder
-)
+preprocessor.preprocess_all(images_folder, out_images_folder)
+
 # preprocessed = Preprocessed()
 # final_predictions_dir = preprocessed.isotropic("/app/ingested_program/FPixel_submission/imagesTs")# "labelsTs" is the prediction folder
 
