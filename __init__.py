@@ -8,9 +8,8 @@ class Preprocessed:
     def __init__(self, target_spacing=1.0):
         self.target_spacing = target_spacing
 
-    def preprocess_all(self, images_folder, segmentations_folder, out_images_folder, out_segmentations_folder):
+    def preprocess_all(self, images_folder, out_images_folder):
         os.makedirs(out_images_folder, exist_ok=True)
-        os.makedirs(out_segmentations_folder, exist_ok=True)
 
         patient_ids = sorted(os.listdir(images_folder))
         for patient_id in patient_ids:
@@ -29,11 +28,6 @@ class Preprocessed:
                 output_filename = f"{patient_id}_000{phase}.nii.gz"
                 sitk.WriteImage(image, os.path.join(out_images_folder, output_filename))
 
-            # Process segmentation
-            if os.path.exists(os.path.join(segmentations_folder, f"{patient_id}.nii.gz")):
-                mask = self.read_segmentation_from_patient_id(segmentations_folder, patient_id)
-                mask = self.make_isotropic(mask, interpolator=sitk.sitkNearestNeighbor)
-                sitk.WriteImage(mask, os.path.join(out_segmentations_folder, f"{patient_id}.nii.gz"))
 
         print("✅ Preprocessing complete.")
         return out_images_folder, out_segmentations_folder
@@ -42,9 +36,6 @@ class Preprocessed:
         path = f"{images_folder}/{patient_id}/{patient_id}_000{phase}.nii.gz"
         return sitk.ReadImage(path, sitk.sitkFloat32)
 
-    def read_segmentation_from_patient_id(self, segmentations_folder, patient_id):
-        path = f"{segmentations_folder}/{patient_id}.nii.gz"
-        return sitk.ReadImage(path, sitk.sitkUInt8)
         
     @staticmethod
     def make_isotropic(image_sitk, target_spacing=1.0, interpolator=sitk.sitkBSpline):
