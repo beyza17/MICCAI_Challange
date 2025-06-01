@@ -30,7 +30,7 @@ class Preprocessed:
 
 
         print("✅ Preprocessing complete.")
-        return out_images_folder, out_segmentations_folder
+        return out_images_folder
 
     def read_mri_phase_from_patient_id(self, images_folder, patient_id, phase=0):
         path = f"{images_folder}/{patient_id}/{patient_id}_000{phase}.nii.gz"
