@@ -100,7 +100,7 @@ class Model:
         sitk.WriteImage(masked_seg_image, output_path)
 
     def predict_segmentation(self, output_dir):
-        print("➡️ Setting up directories...")
+        print(" Setting up directories...")
 
         # === Preprocessed input folder for nnUNet ===
         nnunet_input_images = os.path.join(output_dir, 'nnunet_input_images')
@@ -115,11 +115,11 @@ class Model:
         os.makedirs(output_dir_final, exist_ok=True)
 
         # === Step 1: Preprocess input images ===
-        print("➡️ Starting preprocessing...")
+        print(" Starting preprocessing...")
         self.preprocess_images(nnunet_input_images)
 
         # === Step 2: Run nnUNet prediction ===
-        print("➡️ Running nnUNetv2 prediction...")
+        print(" Running nnUNetv2 prediction...")
 
         nnUNet_raw = "/app/ingested_program/sample_code_submission"
         os.environ['nnUNet_raw'] = nnUNet_raw
@@ -139,10 +139,10 @@ class Model:
 
         result = subprocess.run(cmd, capture_output=True, text=True)
         if result.returncode != 0:
-            print("❌ Prediction failed:\n", result.stderr)
+            print(" Prediction failed:\n", result.stderr)
             raise RuntimeError("nnUNetv2_predict failed")
         else:
-            print("✅ Prediction succeeded.\n", result.stdout)
+            print(" Prediction succeeded.\n", result.stdout)
 
         # === Step 3: Postprocess — apply breast mask ===
         print("🩻 Applying breast coordinate masking...")
@@ -158,8 +158,8 @@ class Model:
             try:
                 self.apply_breast_mask(seg_path, patient_id, final_seg_path)
             except Exception as e:
-                print(f"⚠️ WARNING: Failed to mask {patient_id}: {e}")
+                print(f" WARNING: Failed to mask {patient_id}: {e}")
 
         self.predicted_segmentations = output_dir_final
-        print(f"✅ Final masked segmentations saved to: {output_dir_final}")
+        print(f" Final masked segmentations saved to: {output_dir_final}")
         return output_dir_final
