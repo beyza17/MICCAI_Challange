@@ -2,12 +2,14 @@ from __init__ import Preprocessed
 from model import Model
 
 # Define paths
-images_folder = "/app/ingested_program/FPixel_submission/original_images"
+
 out_images_folder = "/app/ingested_program/FPixel_submission/Dataset006_miccai/imagesTs"
 
 # Preprocess test images only
-preprocessor = Preprocessed()
-preprocessor.preprocess_all(images_folder, out_images_folder)
+# Assume you already have your dataset object from the competition framework
+preprocessor = Preprocessed(dataset)
+preprocessor.preprocess_all(out_images_folder)
+
 
 # preprocessed = Preprocessed()
 # final_predictions_dir = preprocessed.isotropic("/app/ingested_program/FPixel_submission/imagesTs")# "labelsTs" is the prediction folder
