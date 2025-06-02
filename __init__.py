@@ -9,7 +9,7 @@ class SubmissionModel:
     def __init__(self,dataset):
         # Define paths
         self.dataset_id = "Dataset105_full_image"  # <-- match Codabench ingested name
-        self.preprocessed_folder = f"/app/ingested_program/FPixel_submission/{self.dataset_id}/imagesTs"
+        self.preprocessed_folder = f"/app/ingested_program/{self.dataset_id}/imagesTs"
         self.prediction_output_dir = "/app/predictions/pred_segmentations"
 
         # Ensure required folders exist
