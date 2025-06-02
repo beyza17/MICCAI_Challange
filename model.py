@@ -91,7 +91,7 @@ class Model:
 
         # === Postprocessing: apply breast mask using JSON ===
         print("Applying breast coordinate masking...")
-        output_masked_dir = os.path.join(output_dir, "pred_segmentations_masked")
+        output_masked_dir = os.path.join(output_dir, "pred_segmentations") 
         os.makedirs(output_masked_dir, exist_ok=True)
 
         for fname in os.listdir(output_dir):
