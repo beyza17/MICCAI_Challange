@@ -42,7 +42,7 @@ class Model:
     def predict_segmentation(self, output_dir):
         print("Running nnUNetv2 prediction...")
 
-        nnUNet_raw = "/app/ingested_program/FPixel_submission"
+        nnUNet_raw = "/app/ingested_program"
         nnUNet_preprocessed = nnUNet_raw
         nnUNet_results = nnUNet_raw
 
