@@ -2,7 +2,7 @@
 #Primary Tumour Segmentation (Task 1)
 
 
-# ✅ 5 fold cross validation is implemented.
+#  5 fold cross validation is implemented.
 
 # Explanation is in "main.py" file.
 import os
@@ -41,7 +41,7 @@ class Model:
                 output_filename = f"{patient_id}_000{phase_idx}.nii.gz"
                 sitk.WriteImage(image, os.path.join(preprocessed_output_dir, output_filename))
 
-        print("✅ Preprocessing complete.")
+        print(" Preprocessing complete.")
         return preprocessed_output_dir
 
     @staticmethod
@@ -145,7 +145,7 @@ class Model:
             print(" Prediction succeeded.\n", result.stdout)
 
         # === Step 3: Postprocess — apply breast mask ===
-        print("🩻 Applying breast coordinate masking...")
+        print(" Applying breast coordinate masking...")
 
         for fname in os.listdir(output_dir_nnunet):
             if not fname.endswith(".nii.gz"):
