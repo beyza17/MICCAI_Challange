@@ -17,7 +17,7 @@ import numpy as np
 import SimpleITK as sitk
 
 
-class Model:
+class model:
     def __init__(self, dataset, dataset_id="Dataset105_full_image", config="3d_fullres"):
         self.dataset = dataset
         self.dataset_id = dataset_id
