@@ -8,6 +8,8 @@ import SimpleITK as sitk
 from nnunetv2.inference.predict_from_raw_data import nnUNetPredictor
 import torch
 import logging
+import cv2
+import nibabel as nib
 
 # Set up logging for better debugging
 logging.basicConfig(level=logging.INFO)
@@ -63,6 +65,10 @@ class Model:
                 new_spacing = image.GetSpacing()
                 logger.info(f"After resampling - Size: {new_size}, Spacing: {new_spacing}")
                 
+                # Step 2: Apply CLAHE (in-memory)
+                image = self.apply_clahe_to_image(image)
+                logger.info("Applied CLAHE")
+                
                 image = self.z_score_normalize(image)
                 
                 # Get normalized statistics
@@ -82,6 +88,45 @@ class Model:
         
         logger.info(f"Preprocessing complete. Successfully processed {successful_preprocessing}/{len(patient_ids)} patients.")
         return preprocessed_output_dir
+    
+   
+    def apply_clahe_to_image(self, image_sitk, clip_limit=1.5, tile_grid_size=(16, 16)):
+        """
+        Apply CLAHE (Contrast Limited Adaptive Histogram Equalization) to a SimpleITK image.
+
+        Parameters:
+            image_sitk (sitk.Image): Input image (should be resampled to isotropic before).
+            clip_limit (float): CLAHE clip limit.
+            tile_grid_size (tuple): Grid size for CLAHE.
+
+        Returns:
+            sitk.Image: CLAHE-enhanced image (same size and metadata).
+        """
+        try:
+            # Convert to numpy array (z, y, x)
+            array = sitk.GetArrayFromImage(image_sitk)
+            data_min = array.min()
+            data_max = array.max()
+
+            # Normalize to uint8 [0, 255]
+            array_uint8 = ((array - data_min) / (data_max - data_min) * 255).astype(np.uint8)
+
+            # Apply CLAHE slice by slice
+            clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_grid_size)
+            processed_array = np.zeros_like(array_uint8)
+            for i in range(array_uint8.shape[0]):  # z-axis
+                processed_array[i] = clahe.apply(array_uint8[i])
+
+            # Convert back to float32 and original intensity range
+            processed_float = (processed_array.astype(np.float32) / 255.0) * (data_max - data_min) + data_min
+            processed_image = sitk.GetImageFromArray(processed_float)
+            processed_image.CopyInformation(image_sitk)
+            return processed_image
+
+        except Exception as e:
+            logger.error(f"Error applying CLAHE: {str(e)}")
+            return image_sitk  
+
 
     @staticmethod
     def make_isotropic(image_sitk, target_spacing=1.0, interpolator=sitk.sitkBSpline):
