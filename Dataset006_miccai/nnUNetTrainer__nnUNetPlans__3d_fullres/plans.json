@@ -1,5 +1,5 @@
 {
-    "dataset_name": "Dataset006_miccai",
+    "dataset_name": "Dataset105_full_image",
     "plans_name": "nnUNetPlans",
     "original_median_spacing_after_transp": [
         1.0,
@@ -7,7 +7,7 @@
         1.0
     ],
     "original_median_shape_after_transp": [
-        176,
+        175,
         340,
         340
     ],
@@ -189,7 +189,7 @@
                 160
             ],
             "median_image_size_in_voxels": [
-                135,
+                134,
                 261,
                 261
             ],
@@ -350,7 +350,7 @@
                 160
             ],
             "median_image_size_in_voxels": [
-                176.0,
+                175.0,
                 340.0,
                 340.0
             ],
@@ -509,13 +509,13 @@
     "label_manager": "LabelManager",
     "foreground_intensity_properties_per_channel": {
         "0": {
-            "max": 7536.01171875,
-            "mean": 2169.205322265625,
-            "median": 1988.3988037109375,
-            "min": -144.0175018310547,
-            "percentile_00_5": 48.5346565246582,
-            "percentile_99_5": 5857.07177734375,
-            "std": 1543.8226318359375
+            "max": 12640.265625,
+            "mean": 1649.7802734375,
+            "median": 659.0051879882812,
+            "min": -173.31875610351562,
+            "percentile_00_5": 52.5173225402832,
+            "percentile_99_5": 6374.6181640625,
+            "std": 1711.15966796875
         }
     }
 }
