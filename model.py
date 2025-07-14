@@ -199,7 +199,7 @@ class Model:
 
             predictor.initialize_from_trained_model_folder(
                 model_dir,
-                use_folds=(0, 1, 2, 3),  # Still using 4 folds
+                use_folds=(0, 1, 2, 3,4,),  # Still using 4 folds
                 checkpoint_name='checkpoint_final.pth'
             )
 
@@ -265,4 +265,4 @@ class Model:
 
         self.predicted_segmentations = output_dir_final
         logger.info(f"Final segmentations saved to: {output_dir_final}")
-        return output_dir_final 
+        return output_dir_final
