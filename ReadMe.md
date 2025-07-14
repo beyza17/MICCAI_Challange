@@ -1,11 +1,11 @@
-# MAMA-MIA Challenge 2025: Primary Tumour Segmentation in DCE-MRI
+# 🌸 MAMA-MIA Challenge 2025: Primary Tumour Segmentation in DCE-MRI
 
 **Authors:** Beyza Zayim¹, Aissiou Ikram², Boukhiar Naima³  
 ¹ Université de Bourgogne, Dijon 21000, France  
 ² Algeria  
 ³ University of Algiers 1 Ben Youcef Ben Khedda, Algeria
 
-## Overview
+## 🧬 Overview
 
 This repository contains our submission for the MICCAI 2025 MAMA-MIA Challenge, focusing on primary tumor segmentation in Dynamic Contrast-Enhanced MRI (DCE-MRI) breast cancer data. Our approach leverages the nnU-Net framework with a selective training strategy based on image quality and center-specific variability.
 
@@ -16,7 +16,7 @@ This repository contains our submission for the MICCAI 2025 MAMA-MIA Challenge, 
 - **Best Performance**: Achieved validation Dice score of 0.72 using multi-phase (phases 1-3) DUKE+NACT data
 - **Postprocessing**: Keeping only the largest connected component significantly improved results
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 .
@@ -32,7 +32,7 @@ This repository contains our submission for the MICCAI 2025 MAMA-MIA Challenge, 
 └── ReadMe.md
 ```
 
-## Method
+## ⚙️ Method
 
 ### Pipeline Overview
 
@@ -50,7 +50,7 @@ This repository contains our submission for the MICCAI 2025 MAMA-MIA Challenge, 
 - **Hardware**: NVIDIA A100 80GB GPU
 - **Framework**: PyTorch 2.6.0, CUDA 11.8
 
-## Installation
+## 💻 Installation
 
 ### Prerequisites
 
@@ -98,7 +98,7 @@ output_dir = model.predict_segmentation("/path/to/output")
 - **Robust Postprocessing**: Largest connected component filtering
 - **Error Handling**: Comprehensive logging and fallback mechanisms
 
-## Results
+## 📊 Results
 
 ### Performance Metrics
 
