@@ -148,7 +148,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Beyza Zayim**: Université de Bourgogne, Dijon, France
 - **Aissiou Ikram**: Algeria
-- **Naima**: University of Algiers 1 Ben Youcef Ben Khedda, Algeria
+- **Naima Boukhiar**: University of Algiers 1 Ben Youcef Ben Khedda, Algeria
 
 For questions about the implementation, please open an issue in this repository.
 
