@@ -142,7 +142,7 @@ This work was supported by the MAMA-MIA Challenge 2025. We thank the challenge o
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the CC BY-NC 4.0 License - see the LICENSE file for details.
 
 ## Contact
 
